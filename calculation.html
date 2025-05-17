@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiply & Divide</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+    }
+    input[type=”text”] {
+      width: 150px;
+      padding: 5px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<form>
+<label>1st Number :</label>
+<input type="text" id="num1"><br><br>
+
+<label>2nd Number :</label>
+<input type="text" id="num2"><br><br>
+
+<button type="button" onclick="multiply()">Multiply</button>
+<button type="button" onclick="divide()">Divide</button>
+</form>
+
+<div id="result">
+    The Result Is :<br>
+<span id="output"></span>
+</div>
+
+<script>
+    function multiply() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let res = num1 * num2;
+      document.getElementById("output").textContent = res;
+    }
+
+    function divide() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      if (num2 === 0) {
+        document.getElementById("output").textContent = "Cannot divide by zero!";
+      } else {
+        let res = num1 / num2;
+        document.getElementById("output").textContent = res;
+      }
+    }
+</script>
+
+</body>
+</html>

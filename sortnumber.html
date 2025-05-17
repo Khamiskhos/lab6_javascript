@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(189, 188, 188);
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+   
+</head>
+<body>
+    <h2>Input Section</h2>
+    <p>Enter a number  in each of the boxes below
+         and then Click one of
+         the buttons below to either sort the 
+        numbers into ascending or descending 
+        order. the sorted numbers will be placed in
+         the output section
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="one"></td>
+            <td><input type="text" id="two"></td>
+            <td><input type="text" id="three"></td>
+        </tr>
+    </table>
+    <button type="button" onclick="Ascend()">Sort in ascending Order</button>
+    <button type="button" onclick="Descend()">Sort in Descending Order</button>
+    <hr style="color: default;">
+    <h2>Output Section</h2>
+    <p>Once you click on one of the buttons, the number in boxes
+        A,B and C will be sorted accordingly. The sorted numbers 
+        will then be placed in these boxes.
+        
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="R_one" readonly></td>
+            <td><input type="text" id="R_two" disabled></td>
+            <td><input type="text" id="R_three" disabled></td>
+        </tr>
+    </table>
+    <script>
+        function Descend(){
+            let A = document.getElementById("one").value
+            let B = document.getElementById("two").value
+            let C = document.getElementById("three").value
+            let r1 = document.getElementById("R_one").value=Number(A.toString().split("").reverse().join(""));
+            let r2 = document.getElementById("R_two").value=Number(B.toString().split("").reverse().join(""));
+            let r3 = document.getElementById("R_three").value=Number(C.toString().split("").reverse().join(""));
+            /*r1 = A.split("").reverse().join("");
+            r2 = B.split("").reverse().join("");
+            r3 = C.split("").reverse().join("");
+            console.log(r1);
+            console.log(r2);
+            console.log(r3);*/
+            R_one.innerHTML = r1;
+            R_two.innerHTML = r2;
+            R_three.innerHTML = r3;
+
+        }
+        function Ascend(){
+            let A = document.getElementById("one").value
+            let B = document.getElementById("two").value
+            let C = document.getElementById("three").value
+            let r1 = document.getElementById("R_one").value=Number(A.toString().split("").sort().join(""));
+            let r2 = document.getElementById("R_two").value=Number(B.toString().split("").sort().join(""));
+            let r3 = document.getElementById("R_three").value=Number(C.toString().split("").sort().join(""));
+            /*r1 = A.split("").reverse().join("");
+            r2 = B.split("").reverse().join("");
+            r3 = C.split("").reverse().join("");
+            console.log(r1);
+            console.log(r2);
+            console.log(r3);*/
+            R_one.innerHTML = r1;
+            R_two.innerHTML = r2;
+            R_three.innerHTML = r3;
+        }
+    </script>
+</body>
+</html>

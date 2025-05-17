@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(234, 233, 233);
+        }
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        input {
+            padding-right:230px;
+            padding-bottom: 8px;
+            padding-left:5px;
+            padding-top: 8px;
+            font-size: smaller;
+        }
+        label{
+            font-size: xx-small;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        textarea{
+            padding-top: 5px;
+            padding-right: 240px;
+            padding-left: 5px;
+        }
+        button {
+            font-size: medium;
+            color: white;
+            background-color: black;
+            padding-left: 149px;
+            padding-right: 149px;
+            text-align: justify;
+            padding-bottom: 10px;
+            padding-top:10px ;
+            align-items: center;
+            border-radius: 8px;
+        }
+        
+    </style>
+
+
+   
+</head>
+<body>
+    <form action="" id="myform">
+        <h1>Send Message</h1>
+        <label for="">Name:</label><br>
+        <input type="text" name="name" value="Laurence Svekis" id="name"><br>
+        <label for="">Email:</label><br>
+        <input type="email" name="email" value="gappscourses+100@gmail.com" id="email" onmouseleave=><br>
+        <label for="">Message:</label><br>
+        <textarea name="Message" id="mssg" value="Hello World" cols="20" rows="2" id="message">hello world</textarea><br>
+        <button type="submit" onsubmit="preventer(event)">Send Message</button>
+        <div id="errorMessage" style="color: red;"></div>
+         <script>
+
+            
+       
+      
+        let form = document.getElementById("myform");
+        form.addEventListener("submit",
+        function preventer(e){
+            e.preventDefault();
+           /* alert("form submitted successfully");*/
+   
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value;
+            let pp = document.getElementById("mssg").value
+            let errorMessage = document.getElementById("errorMessage");
+
+
+            errorMessage.innerHTML = "";
+
+
+
+
+
+            if(name === ""|| email === ""|| pp === ""){
+                errorMessage.innerHTML = "name is required!";
+                return;
+            }
+
+
+            errorMessage.innerHTML = "form submitted successfully!";
+            form.reset(); 
+                    
+            }
+            
+        );
+    
+       
+    </script>
+    </form> 
+</body>
+</html>

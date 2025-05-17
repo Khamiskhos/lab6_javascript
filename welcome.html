@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome message</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 20px;
+        }
+        #message {
+            margin-top: 10px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>What is your name?</h2>
+<input type="text" id="username" placeholder="Your name">
+<button onclick="showMessage()">Submit</button>
+<div id="message"></div>
+<script>
+    function showMessage() {
+      let name = document.getElementById("username").value;
+      let messageBox = document.getElementById("message");
+if (name.length > 3) {
+  messageBox.textContent = "Welcome to the site," + name + "!";
+} else {
+  messageBox.textContent = "Name must be longer than 3 characters.";
+  messageBox.style.color = "red";
+}
+}
+</script>
+</body>
+</html>

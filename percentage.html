@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>World Population Percentages</title>
+</head>
+<body>
+
+<h2>Open the Console to See Population Percentages</h2>
+
+<script>
+    function percentageOfWorld1(population) {
+      return (population / 7900) * 100;
+    }
+
+    const tanzania1 = percentageOfWorld1(63);
+    const india1 = percentageOfWorld1(1393);
+    const usa1 = percentageOfWorld1(331);
+
+    console.log("Tanzania:", tanzania1.toFixed(2) + "%");
+    console.log("India:", india1.toFixed(2) + "%");
+    console.log("USA:", usa1.toFixed(2) + "%");
+
+    const percentageOfWorld2 = function(population) {
+      return (population / 7900) * 100;
+    };
+
+    const tanzania2 = percentageOfWorld2(63);
+    const india2 = percentageOfWorld2(1393);
+    const usa2 = percentageOfWorld2(331);
+
+    console.log("Tanzania (2):", tanzania2.toFixed(2) + "%");
+    console.log("India (2):", india2.toFixed(2) + "%");
+    console.log("USA (2):", usa2.toFixed(2) + "%");
+
+    const percentageOfWorld3 = population => (population / 7900) * 100;
+
+    const tanzania3 = percentageOfWorld3(63);
+    const india3 = percentageOfWorld3(1393);
+    const usa3 = percentageOfWorld3(331);
+
+    console.log("Tanzania (3):", tanzania3.toFixed(2) + "%");
+    console.log("India (3):", india3.toFixed(2) + "%");
+    console.log("USA (3):", usa3.toFixed(2) + "%");
+</script>
+</body>
+</html>
